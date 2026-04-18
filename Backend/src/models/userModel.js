@@ -4,6 +4,8 @@ const userSchema = new mongoose.Schema(
   {
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    // Add additional fields for user profile
+    fullName: { type: String },
     email: { type: String, required: true, unique: true },
     gender: { type: String, enum: ["male", "female", "other"] },
     dateOfBirth: { type: Date },
